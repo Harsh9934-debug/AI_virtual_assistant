@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>J.A.R.V.I.S. Assistant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap");
+
+      body {
+        font-family: "Orbitron", sans-serif;
+      }
+
+      .neon-text {
+        text-shadow: 0 0 5px #00eaff, 0 0 10px #00eaff, 0 0 20px #00eaff;
+      }
+
+      .neon-btn {
+        box-shadow: 0 0 8px #00eaff, 0 0 12px #00eaff;
+      }
+
+      .pulse-animation {
+        animation: pulse 1s infinite alternate;
+      }
+
+      @keyframes pulse {
+        0% {
+          text-shadow: 0 0 5px #00eaff, 0 0 10px #00eaff;
+        }
+        100% {
+          text-shadow: 0 0 10px #00eaff, 0 0 20px #00eaff;
+        }
+      }
+    </style>
+</head>
+<body class="flex items-center justify-center h-screen bg-black">
+    <div class="text-center p-8 rounded-3xl shadow-lg bg-white/5 backdrop-blur-md border border-white/10 w-96">
+      <h1 class="text-3xl text-white font-bold neon-text mb-4">J.A.R.V.I.S</h1>
+      
+
+      <button
+        id="startRecognition"
+        class="bg-transparent neon-btn border-2 border-cyan-400 text-cyan-400 font-bold py-2 px-6 rounded-lg transition duration-300 hover:bg-cyan-400 hover:text-black"
+      >
+      🎙 Activate Listening
+      </button>
+
+      <button
+        id="stopButton"
+        class="bg-red-500 mt-7 text-white font-bold py-2 px-6 rounded-lg transition duration-300 hover:bg-red-700"
+      >
+        🛑 Stop Listening
+      </button>
+    </div>
+
+    <script>
+      const start = document.getElementById("startRecognition");
+      const stopButton = document.getElementById("stopButton");
+
+      let isSpeaking = false;
+      const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+      recognition.continuous = false;
+      recognition.interimResults = false;
+      recognition.maxAlternatives = 1;
+
+      // Initialize speech synthesis
+      const synth = window.speechSynthesis;
+
+      start.addEventListener("click", () => {
+        if (isSpeaking) return;
+        console.log("Listening for Command...");
+        synth.cancel(); // Cancel any ongoing speech
+        recognition.start();
+      });
+
+      recognition.onresult = async ({ results }) => {
+        recognition.stop();
+        const recognizedText = results[0][0].transcript;
+        console.log("Recognized Text:", recognizedText);
+
+        if (!recognizedText.trim() || isSpeaking) return;
+
+        try {
+            isSpeaking = true;
+            start.disabled = true;
+            start.innerHTML = '<span class="pulse-animation">Processing...</span>';
+
+            const response = await fetch("http://localhost:3000/jarvis/virtualAssistant", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ prompt: recognizedText }),
+            });
+
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            
+            const data = await response.json();
+            console.log("Response from server:", data.response);
+
+            // Cancel any pending speech before new one
+            synth.cancel();
+            
+            const utterance = new SpeechSynthesisUtterance(data.response);
+            utterance.rate = 1.0;
+            utterance.pitch = 1.0;
+            utterance.volume = 1.0;
+
+            utterance.onend = () => {
+                isSpeaking = false;
+                start.disabled = false;
+                start.innerHTML = '🎙 Activate Listening';
+            };
+
+            utterance.onerror = (event) => {
+                console.error("Speech error:", event);
+                isSpeaking = false;
+                start.disabled = false;
+                start.innerHTML = '🎙 Activate Listening';
+            };
+
+            synth.speak(utterance);
+        } catch (error) {
+            console.error("Error:", error);
+            isSpeaking = false;
+            start.disabled = false;
+            start.innerHTML = '🎙 Activate Listening';
+        }
+      };
+
+      recognition.onerror = (event) => {
+        console.log("Recognition error:", event.error);
+        isSpeaking = false;
+        start.disabled = false;
+        start.innerHTML = '🎙 Activate Listening';
+      };
+
+      stopButton.addEventListener("click", () => {
+        synth.cancel();
+        recognition.stop();
+        isSpeaking = false;
+        start.disabled = false;
+        start.innerHTML = '🎙 Activate Listening';
+      });
+    </script>
+</body>
+</html>
