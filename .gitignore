@@ -1,7 +1,8 @@
-# Environment variables
+# Environment variables (anywhere in the project)
+**/.env
 .env
-.env.local
-.env.*.local
+.env.*
+!.env.example
 
 # Node.js
 node_modules/
@@ -22,6 +23,16 @@ yarn.lock
 # Logs
 logs/
 *.log
+
+# Build and Cache
+dist/
+build/
+.cache/
+.parcel-cache/
+
+# Testing
+coverage/
+.nyc_output/
 
 # OS
 Thumbs.db
