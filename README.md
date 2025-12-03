@@ -4,7 +4,6 @@
 
 ![Version](https://img.shields.io/badge/version-2.0.1-blue)
 ![Node](https://img.shields.io/badge/node-%3E%3D16.0.0-green)
-![License](https://img.shields.io/badge/license-MIT-yellow)
 
 ## 🧠 Project Overview
 
@@ -131,7 +130,7 @@ AI_virtual_assistant/
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/jarvis-ai-assistant.git
+git clone https://github.com/Harsh9934-debug/AI_virtual_assistant.git
 cd jarvis-ai-assistant/AI_virtual_assistant
 ```
 
@@ -324,13 +323,7 @@ To add new commands:
 
 ---
 
-## 📞 Support
 
-- **Issues:** [GitHub Issues](https://github.com/yourusername/jarvis-ai-assistant/issues)
-- **Discussions:** [GitHub Discussions](https://github.com/yourusername/jarvis-ai-assistant/discussions)
-- **Email:** harshkumargupta630@gmail.com
-
----
 
 <div align="center">
 
