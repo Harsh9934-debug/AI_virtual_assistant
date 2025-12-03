@@ -4,6 +4,9 @@
 
 ![Version](https://img.shields.io/badge/version-2.0.1-blue)
 ![Node](https://img.shields.io/badge/node-%3E%3D16.0.0-green)
+![macOS](https://img.shields.io/badge/macOS-Compatible-brightgreen)
+![Windows](https://img.shields.io/badge/Windows-Compatible-brightgreen)
+![Linux](https://img.shields.io/badge/Linux-Compatible-brightgreen)
 
 ## 🧠 Project Overview
 
@@ -125,6 +128,24 @@ AI_virtual_assistant/
 - **npm** or **yarn**
 - **GROQ API Key** (free at console.groq.com)
 - **NewsAPI Key** (free at newsapi.org)
+- **Modern web browser** with Web Speech API support
+
+### **Platform-Specific Requirements**
+
+#### macOS
+- macOS 10.14 (Mojave) or later
+- Terminal with Accessibility permissions (for advanced features)
+
+#### Windows
+- Windows 10 version 1903 or later
+- Windows 11 (recommended for best experience)
+- PowerShell 5.1+ (usually pre-installed)
+
+#### Linux
+- Ubuntu 18.04+, Debian 10+, or equivalent
+- Audio system (ALSA/PulseAudio)
+- X11 or Wayland display server
+- Optional: `espeak` for enhanced TTS
 
 ### Installation Steps
 
@@ -314,25 +335,212 @@ To add new commands:
 
 ---
 
-## Acknowledgments
+## 💻 Operating System Compatibility
 
-- **OpenAI** - For inspiration in AI assistant design
-- **GROQ** - For fast language model inference
-- **TailwindCSS** - For beautiful, responsive styling
-- **Iron Man/Marvel** - For the JARVIS concept and design inspiration
+JARVIS is designed to work seamlessly across multiple operating systems with platform-specific optimizations:
+
+### ✅ **Fully Supported Platforms**
+
+#### 🍎 **macOS** (10.14+ recommended)
+- **Voice Commands:** Native `say` command integration
+- **System Control:** AppleScript automation
+- **App Launching:** Native `open -a` commands
+- **Brightness Control:** System Events integration
+- **Volume Control:** AppleScript audio management
+- **Screenshots:** Native `screencapture` utility
+- **File Operations:** Spotlight search (`mdfind`)
+- **Special Features:** 
+  - Focus mode (Do Not Disturb)
+  - System shortcuts integration
+  - Native notification sounds
+
+#### 🪟 **Windows** (10/11)
+- **Voice Commands:** PowerShell speech synthesis
+- **System Control:** WMI (Windows Management Instrumentation)
+- **App Launching:** Native `start` command
+- **Brightness Control:** WMI monitor methods
+- **Volume Control:** NirCmd or PowerShell audio
+- **Screenshots:** PowerShell screen capture
+- **File Operations:** `where` command and PowerShell
+- **Special Features:**
+  - Windows Store app integration
+  - Task Manager automation
+  - Registry operations (advanced)
+
+#### 🐧 **Linux** (Ubuntu 18.04+, Debian, CentOS, Fedora)
+- **Voice Commands:** `espeak` or `festival` TTS
+- **System Control:** SystemD and native Linux commands
+- **App Launching:** Desktop file execution
+- **Brightness Control:** `xrandr` or `/sys/class/backlight`
+- **Volume Control:** ALSA/PulseAudio integration
+- **Screenshots:** `scrot` or `gnome-screenshot`
+- **File Operations:** `find` and `locate` commands
+- **Special Features:**
+  - Desktop environment integration (GNOME, KDE, XFCE)
+  - Package manager integration
 
 ---
 
+## 🛠️ Platform-Specific Setup
 
+### 🍎 **macOS Setup**
+```bash
+# Enable accessibility permissions for terminal
+# System Preferences > Security & Privacy > Accessibility > Add Terminal
 
-<div align="center">
+# Install optional dependencies
+brew install node npm
 
-**Made with ❤️ by [Harsh kumar gupta]**
+# For enhanced voice synthesis (optional)
+# System Preferences > Accessibility > Spoken Content
+```
 
-*"Sometimes you gotta run before you can walk."* - Tony Stark
+### 🪟 **Windows Setup**
+```powershell
+# Install Node.js from nodejs.org
+# No additional permissions required for basic features
 
-[⭐ Star this repo]
-</div>
+# For enhanced system control (optional)
+# Install NirCmd: https://www.nirsoft.net/utils/nircmd.html
+# Add to PATH for advanced volume control
+```
+
+### 🐧 **Linux Setup**
+```bash
+# Install dependencies
+sudo apt update
+sudo apt install nodejs npm espeak alsa-utils
+
+# For screenshot functionality
+sudo apt install scrot
+
+# For brightness control (laptop users)
+# May require adding user to video group
+sudo usermod -a -G video $USER
+```
+
+---
+
+## ⚙️ Feature Compatibility Matrix
+
+| Feature | macOS | Windows | Linux | Notes |
+|---------|-------|---------|--------|-------|
+| **Voice Recognition** | ✅ | ✅ | ✅ | Browser-based, universal |
+| **Text-to-Speech** | ✅ | ✅ | ✅ | Native TTS on all platforms |
+| **App Launching** | ✅ | ✅ | ✅ | Platform-specific commands |
+| **Brightness Control** | ✅ | ✅ | ⚠️ | Linux: Laptop only |
+| **Volume Control** | ✅ | ⚠️ | ✅ | Windows: May need NirCmd |
+| **Screenshots** | ✅ | ✅ | ✅ | All platforms supported |
+| **File Search** | ✅ | ✅ | ✅ | Optimized per platform |
+| **System Monitoring** | ✅ | ✅ | ✅ | Cross-platform Node.js |
+| **Notes & Todos** | ✅ | ✅ | ✅ | File-based, universal |
+| **Timers & Alerts** | ✅ | ✅ | ✅ | All platforms supported |
+
+**Legend:** ✅ Full Support | ⚠️ Partial/Optional | ❌ Not Supported
+
+---
+
+## 🔧 Platform Detection
+
+JARVIS automatically detects your operating system and uses appropriate commands:
+
+```javascript
+// Automatic platform detection
+const platform = process.platform;
+// 'darwin' = macOS
+// 'win32' = Windows  
+// 'linux' = Linux
+
+// Commands adapt automatically
+const volumeCommand = {
+  darwin: 'osascript -e "set volume 5"',
+  win32: 'nircmd.exe setsysvolume 50',
+  linux: 'amixer set Master 50%'
+};
+```
+
+---
+
+## 🌐 Browser Compatibility
+
+### **Web Speech API Support**
+- ✅ **Chrome/Chromium** (Recommended) - Full support
+- ✅ **Microsoft Edge** - Full support  
+- ✅ **Safari** (macOS) - Full support
+- ⚠️ **Firefox** - Limited speech recognition
+- ❌ **Internet Explorer** - Not supported
+
+### **Recommended Browsers by Platform**
+- **macOS:** Chrome, Safari, Edge
+- **Windows:** Chrome, Edge
+- **Linux:** Chrome, Chromium
+
+---
+
+## 🚀 Performance by Platform
+
+### **Optimal Performance**
+- **macOS:** Best native integration, fastest voice processing
+- **Windows 11:** Excellent performance, modern TTS
+- **Windows 10:** Good performance, may need additional setup
+- **Linux:** Solid performance, highly customizable
+
+### **Resource Usage**
+- **RAM:** ~50-100MB (lightweight)
+- **CPU:** Minimal when idle, moderate during voice processing
+- **Disk:** ~20MB base installation + data files
+- **Network:** Only for AI API calls and news updates
+
+---
+
+## 🐛 Platform-Specific Troubleshooting
+
+### 🍎 **macOS Issues**
+
+**"Operation not permitted" errors**
+- Grant Terminal accessibility permissions
+- System Preferences > Security & Privacy > Accessibility
+
+**Voice commands not working**
+- Check microphone permissions in browser
+- System Preferences > Security & Privacy > Microphone
+
+### 🪟 **Windows Issues**
+
+**Volume control not working**
+- Install NirCmd utility for advanced audio control
+- Some features may require administrator privileges
+
+**PowerShell execution policy**
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+
+### 🐧 **Linux Issues**
+
+**Audio/TTS not working**
+```bash
+# Install audio dependencies
+sudo apt install espeak espeak-data
+sudo apt install alsa-utils pulseaudio
+
+# Test audio
+espeak "Hello World"
+```
+
+**Brightness control not working**
+```bash
+# Add user to video group
+sudo usermod -a -G video $USER
+# Logout and login again
+```
+
+**Permission denied for file operations**
+```bash
+# Ensure proper permissions
+chmod 755 ./data
+mkdir -p ./data
+```
 
 
 
