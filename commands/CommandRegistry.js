@@ -2,6 +2,11 @@ import { WebCommand } from './WebCommand.js';
 import { AppCommand } from './AppCommand.js';
 import { BrightnessCommand } from './BrightnessCommand.js';
 import { NewsCommand } from './NewsCommand.js';
+import { TimerCommand } from './TimerCommand.js';
+import { CalculatorCommand } from './CalculatorCommand.js';
+import { ScreenshotCommand } from './ScreenshotCommand.js';
+import { SystemMonitorCommand } from './SystemMonitorCommand.js';
+import { FileSearchCommand } from './FileSearchCommand.js';
 
 export class CommandRegistry {
     constructor() {
@@ -28,9 +33,14 @@ export class CommandRegistry {
         this.register(new AppCommand('terminal', 'Terminal', 'cmd', ['open terminal', 'open command prompt']));
         this.register(new AppCommand('camera', 'Photo Booth', 'microsoft.windows.camera:', ['open camera']));
 
-        // Special commands
+        // Feature commands
         this.register(new BrightnessCommand());
         this.register(new NewsCommand());
+        this.register(new TimerCommand());
+        this.register(new CalculatorCommand());
+        this.register(new ScreenshotCommand());
+        this.register(new SystemMonitorCommand());
+        this.register(new FileSearchCommand());
     }
 
     register(command) {
