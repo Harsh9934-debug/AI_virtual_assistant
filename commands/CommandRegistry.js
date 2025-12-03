@@ -7,6 +7,14 @@ import { CalculatorCommand } from './CalculatorCommand.js';
 import { ScreenshotCommand } from './ScreenshotCommand.js';
 import { SystemMonitorCommand } from './SystemMonitorCommand.js';
 import { FileSearchCommand } from './FileSearchCommand.js';
+// New productivity commands
+import { DateTimeCommand } from './DateTimeCommand.js';
+import { VolumeCommand } from './VolumeCommand.js';
+import { NotesCommand } from './NotesCommand.js';
+import { TodoCommand } from './TodoCommand.js';
+import { FileOperationsCommand } from './FileOperationsCommand.js';
+import { HealthReminderCommand } from './HealthReminderCommand.js';
+import { SmartRoutineCommand } from './SmartRoutineCommand.js';
 
 export class CommandRegistry {
     constructor() {
@@ -41,6 +49,15 @@ export class CommandRegistry {
         this.register(new ScreenshotCommand());
         this.register(new SystemMonitorCommand());
         this.register(new FileSearchCommand());
+        
+        // New productivity commands
+        this.register(new DateTimeCommand());
+        this.register(new VolumeCommand());
+        this.register(new NotesCommand());
+        this.register(new TodoCommand());
+        this.register(new FileOperationsCommand());
+        this.register(new HealthReminderCommand());
+        this.register(new SmartRoutineCommand());
     }
 
     register(command) {
