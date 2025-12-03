@@ -328,7 +328,7 @@ To add new commands:
 
 - **Issues:** [GitHub Issues](https://github.com/yourusername/jarvis-ai-assistant/issues)
 - **Discussions:** [GitHub Discussions](https://github.com/yourusername/jarvis-ai-assistant/discussions)
-- **Email:** your.email@example.com
+- **Email:** harshkumargupta630@gmail.com
 
 ---
 
