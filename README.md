@@ -8,69 +8,69 @@
 ![Windows](https://img.shields.io/badge/Windows-Compatible-brightgreen)
 ![Linux](https://img.shields.io/badge/Linux-Compatible-brightgreen)
 
-## 🧠 Project Overview
+##  Project Overview
 
 JARVIS is a sophisticated AI-powered virtual assistant that combines voice recognition, natural language processing, and system automation to create an intelligent companion for your digital life. Built with modern web technologies and a futuristic UI inspired by Iron Man's JARVIS, this assistant provides seamless voice-controlled interactions and smart automation capabilities.
 
 The system features a beautiful glassmorphism interface with animated backgrounds, arc reactor-style visualizations, and real-time status indicators. It processes voice commands through advanced speech recognition, executes system operations, manages productivity tasks, and provides intelligent responses through integration with the GROQ AI API.
 
 **Key Capabilities:**
-- 🎤 **Voice-First Interface** - Natural speech recognition and text-to-speech
-- 🤖 **AI-Powered Responses** - Intelligent conversations using GROQ LLM
-- ⚙️ **System Control** - Native OS automation and app management  
-- 📋 **Productivity Suite** - Notes, todos, reminders, and smart routines
-- 🎯 **Context Awareness** - Remembers commands and learns user patterns
-- 🔧 **Modular Architecture** - Easily extensible command system
+-  **Voice-First Interface** - Natural speech recognition and text-to-speech
+-  **AI-Powered Responses** - Intelligent conversations using GROQ LLM
+-  **System Control** - Native OS automation and app management  
+-  **Productivity Suite** - Notes, todos, reminders, and smart routines
+-  **Context Awareness** - Remembers commands and learns user patterns
+-  **Modular Architecture** - Easily extensible command system
 
 ---
 
-## ✨ Features
+##  Features
 
-### 🎮 **Core AI Features**
-- 🗣️ Voice recognition with real-time processing
-- 🔊 Text-to-speech with natural voice synthesis
-- 🧠 Conversational AI powered by GROQ API
-- 📝 Context-aware command interpretation
-- 🎯 Smart suggestions and quick commands
+###  **Core AI Features**
+-  Voice recognition with real-time processing
+-  Text-to-speech with natural voice synthesis
+-  Conversational AI powered by GROQ API
+-  Context-aware command interpretation
+-  Smart suggestions and quick commands
 
-### ⚙️ **System Control**
-- 🖥️ Application launcher (VS Code, Spotify, Brave, etc.)
-- 🔆 Brightness control with voice commands
-- 🔊 Volume control and audio management
-- 📸 Screenshot capture with automatic saving
-- 📊 System monitoring (CPU, memory, disk usage)
-- 🗂️ File search and organization
+###  **System Control**
+-  Application launcher (VS Code, Spotify, Brave, etc.)
+-  Brightness control with voice commands
+-  Volume control and audio management
+-  Screenshot capture with automatic saving
+-  System monitoring (CPU, memory, disk usage)
+-  File search and organization
 
-### 📋 **Productivity Suite**
-- 📝 **Smart Notes** - Voice-to-text note taking and retrieval
-- ✅ **Todo Management** - Task creation, completion tracking
-- ⏰ **Multi-Timer System** - Multiple named timers with audio alerts
-- ⏱️ **Stopwatch** - Precision timing with voice control
-- 🧮 **Advanced Calculator** - Math operations and unit conversions
-- 📅 **Date & Time** - Current time and date information
+###  **Productivity Suite**
+-  **Smart Notes** - Voice-to-text note taking and retrieval
+-  **Todo Management** - Task creation, completion tracking
+-  **Multi-Timer System** - Multiple named timers with audio alerts
+-  **Stopwatch** - Precision timing with voice control
+-  **Advanced Calculator** - Math operations and unit conversions
+-  **Date & Time** - Current time and date information
 
-### 🏃 **Health & Wellness**
-- 💧 Water reminders with customizable intervals
-- 🪑 Posture check reminders
-- 👀 Eye rest with 20-20-20 rule timer
-- ⏰ Break reminders for productivity
-- 🧘 Wellness routine automation
+###  **Health & Wellness**
+-  Water reminders with customizable intervals
+-  Posture check reminders
+-  Eye rest with 20-20-20 rule timer
+-  Break reminders for productivity
+-  Wellness routine automation
 
 ### ⚡ **Smart Routines**
-- 🌅 **Morning Routine** - Opens calendar, email, news, weather
-- 💼 **Work Mode** - Launches dev tools, enables focus mode
-- 🏠 **End Workday** - Closes work apps, disables notifications
-- 🎯 **Focus Sessions** - Distraction-free work periods
+-  **Morning Routine** - Opens calendar, email, news, weather
+-  **Work Mode** - Launches dev tools, enables focus mode
+-  **End Workday** - Closes work apps, disables notifications
+-  **Focus Sessions** - Distraction-free work periods
 
-### 📰 **Information Services**
-- 📰 Latest news headlines with Google News integration
-- 🗂️ File search across system directories
-- 📊 System performance monitoring
-- 🔍 Quick web searches and navigation
+###  **Information Services**
+-  Latest news headlines with Google News integration
+-  File search across system directories
+-  System performance monitoring
+-  Quick web searches and navigation
 
 ---
 
-## 🚀 Tech Stack
+##  Tech Stack
 
 **Frontend:**
 -  **EJS Templates** - Server-side rendering
