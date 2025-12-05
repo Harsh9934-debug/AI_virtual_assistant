@@ -56,7 +56,7 @@ The system features a beautiful glassmorphism interface with animated background
 -  Break reminders for productivity
 -  Wellness routine automation
 
-### ⚡ **Smart Routines**
+###  **Smart Routines**
 -  **Morning Routine** - Opens calendar, email, news, weather
 -  **Work Mode** - Launches dev tools, enables focus mode
 -  **End Workday** - Closes work apps, disables notifications
