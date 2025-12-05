@@ -1,4 +1,4 @@
-# 🤖 J.A.R.V.I.S - AI Virtual Assistant
+# J.A.R.V.I.S - AI Virtual Assistant
 
 > **Just A Rather Very Intelligent System** - Your personal AI assistant inspired by Tony Stark's JARVIS
 
