@@ -73,26 +73,26 @@ The system features a beautiful glassmorphism interface with animated background
 ## 🚀 Tech Stack
 
 **Frontend:**
-- 🎨 **EJS Templates** - Server-side rendering
-- 🌈 **TailwindCSS** - Modern utility-first styling
-- ✨ **Custom CSS Animations** - Arc reactor, grid backgrounds, glassmorphism
-- 🎤 **Web Speech API** - Voice recognition and synthesis
+-  **EJS Templates** - Server-side rendering
+-  **TailwindCSS** - Modern utility-first styling
+-  **Custom CSS Animations** - Arc reactor, grid backgrounds, glassmorphism
+-  **Web Speech API** - Voice recognition and synthesis
 
 **Backend:**
-- ⚡ **Node.js & Express** - High-performance server
-- 🤖 **GROQ API** - Advanced language model integration
-- 📰 **NewsAPI** - Real-time news data
-- 🗂️ **File System APIs** - Local data persistence
+-  **Node.js & Express** - High-performance server
+-  **GROQ API** - Advanced language model integration
+-  **NewsAPI** - Real-time news data
+-  **File System APIs** - Local data persistence
 
 **Architecture:**
-- 🏗️ **Command Pattern** - Modular, extensible command system
-- 🔄 **Event-Driven** - Real-time voice processing
-- 📦 **JSON Storage** - Lightweight data persistence
-- 🛡️ **Error Handling** - Robust error management and logging
+-  **Command Pattern** - Modular, extensible command system
+-  **Event-Driven** - Real-time voice processing
+-  **JSON Storage** - Lightweight data persistence
+-  **Error Handling** - Robust error management and logging
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 AI_virtual_assistant/
@@ -121,7 +121,7 @@ AI_virtual_assistant/
 
 ---
 
-## 🛠️ Installation & Setup
+##  Installation & Setup
 
 ### Prerequisites
 - **Node.js** (v16 or higher)
@@ -185,18 +185,18 @@ http://localhost:3000
 
 ---
 
-## 🎯 Usage Examples
+##  Usage Examples
 
 ### Voice Commands
-- 🗣️ **"What time is it?"** - Get current time and date
-- 📝 **"Take note: Buy groceries"** - Save a quick note
-- ✅ **"Add task: Call dentist"** - Create a todo item
-- ⏰ **"Set timer for 5 minutes"** - Start a countdown timer
-- 🔆 **"Increase brightness by 20%"** - Adjust screen brightness
-- 🎵 **"Open Spotify"** - Launch applications
-- 📰 **"Today's news"** - Get latest headlines
-- 🌅 **"Start morning routine"** - Execute smart automation
-- 💧 **"Water reminder every hour"** - Set health reminders
+-  **"What time is it?"** - Get current time and date
+-  **"Take note: Buy groceries"** - Save a quick note
+-  **"Add task: Call dentist"** - Create a todo item
+-  **"Set timer for 5 minutes"** - Start a countdown timer
+-  **"Increase brightness by 20%"** - Adjust screen brightness
+-  **"Open Spotify"** - Launch applications
+-  **"Today's news"** - Get latest headlines
+-  **"Start morning routine"** - Execute smart automation
+-  **"Water reminder every hour"** - Set health reminders
 
 ### Quick Commands (UI Buttons)
 - **What time is it?** - Instant time check
@@ -207,9 +207,9 @@ http://localhost:3000
 
 ---
 
-## 🔧 Available Commands
+##  Available Commands
 
-### 📱 **System Control**
+###  **System Control**
 | Command | Description | Example |
 |---------|-------------|---------|
 | `open [app]` | Launch applications | "Open VS Code" |
@@ -218,7 +218,7 @@ http://localhost:3000
 | `take screenshot` | Capture screen | "Take a screenshot" |
 | `system status` | Check performance | "Show system status" |
 
-### 📝 **Productivity**
+###  **Productivity**
 | Command | Description | Example |
 |---------|-------------|---------|
 | `take note: [text]` | Save notes | "Take note: Important meeting" |
@@ -227,7 +227,7 @@ http://localhost:3000
 | `todo list` | View pending tasks | "Show my tasks" |
 | `complete task: [text]` | Mark tasks done | "Complete task: groceries" |
 
-### ⏰ **Timers & Scheduling**
+###  **Timers & Scheduling**
 | Command | Description | Example |
 |---------|-------------|---------|
 | `set timer for [time]` | Start countdown | "Set timer for 10 minutes" |
@@ -235,7 +235,7 @@ http://localhost:3000
 | `stop stopwatch` | End timing | "Stop stopwatch" |
 | `what time is it` | Current time | "What time is it?" |
 
-### 🏃 **Health & Wellness**
+###  **Health & Wellness**
 | Command | Description | Example |
 |---------|-------------|---------|
 | `water reminder every [time]` | Hydration alerts | "Water reminder every hour" |
@@ -245,7 +245,7 @@ http://localhost:3000
 
 ---
 
-## 🔌 API Integrations
+##  API Integrations
 
 ### GROQ AI Integration
 - **Endpoint:** `https://api.groq.com/openai/v1/chat/completions`
@@ -295,7 +295,7 @@ To add new commands:
 
 ---
 
-## 📊 Data Storage
+##  Data Storage
 
 ### Notes Storage
 - **Location:** `./data/notes.json`
@@ -335,13 +335,13 @@ To add new commands:
 
 ---
 
-## 💻 Operating System Compatibility
+##  Operating System Compatibility
 
 JARVIS is designed to work seamlessly across multiple operating systems with platform-specific optimizations:
 
-### ✅ **Fully Supported Platforms**
+###  **Fully Supported Platforms**
 
-#### 🍎 **macOS** (10.14+ recommended)
+####  **macOS** (10.14+ recommended)
 - **Voice Commands:** Native `say` command integration
 - **System Control:** AppleScript automation
 - **App Launching:** Native `open -a` commands
@@ -354,7 +354,7 @@ JARVIS is designed to work seamlessly across multiple operating systems with pla
   - System shortcuts integration
   - Native notification sounds
 
-#### 🪟 **Windows** (10/11)
+####  **Windows** (10/11)
 - **Voice Commands:** PowerShell speech synthesis
 - **System Control:** WMI (Windows Management Instrumentation)
 - **App Launching:** Native `start` command
@@ -367,7 +367,7 @@ JARVIS is designed to work seamlessly across multiple operating systems with pla
   - Task Manager automation
   - Registry operations (advanced)
 
-#### 🐧 **Linux** (Ubuntu 18.04+, Debian, CentOS, Fedora)
+####  **Linux** (Ubuntu 18.04+, Debian, CentOS, Fedora)
 - **Voice Commands:** `espeak` or `festival` TTS
 - **System Control:** SystemD and native Linux commands
 - **App Launching:** Desktop file execution
@@ -381,9 +381,9 @@ JARVIS is designed to work seamlessly across multiple operating systems with pla
 
 ---
 
-## 🛠️ Platform-Specific Setup
+##  Platform-Specific Setup
 
-### 🍎 **macOS Setup**
+###  **macOS Setup**
 ```bash
 # Enable accessibility permissions for terminal
 # System Preferences > Security & Privacy > Accessibility > Add Terminal
@@ -395,7 +395,7 @@ brew install node npm
 # System Preferences > Accessibility > Spoken Content
 ```
 
-### 🪟 **Windows Setup**
+###  **Windows Setup**
 ```powershell
 # Install Node.js from nodejs.org
 # No additional permissions required for basic features
@@ -405,7 +405,7 @@ brew install node npm
 # Add to PATH for advanced volume control
 ```
 
-### 🐧 **Linux Setup**
+###  **Linux Setup**
 ```bash
 # Install dependencies
 sudo apt update
@@ -421,7 +421,7 @@ sudo usermod -a -G video $USER
 
 ---
 
-## ⚙️ Feature Compatibility Matrix
+##  Feature Compatibility Matrix
 
 | Feature | macOS | Windows | Linux | Notes |
 |---------|-------|---------|--------|-------|
@@ -440,7 +440,7 @@ sudo usermod -a -G video $USER
 
 ---
 
-## 🔧 Platform Detection
+##  Platform Detection
 
 JARVIS automatically detects your operating system and uses appropriate commands:
 
@@ -477,7 +477,7 @@ const volumeCommand = {
 
 ---
 
-## 🚀 Performance by Platform
+##  Performance by Platform
 
 ### **Optimal Performance**
 - **macOS:** Best native integration, fastest voice processing
@@ -493,9 +493,9 @@ const volumeCommand = {
 
 ---
 
-## 🐛 Platform-Specific Troubleshooting
+##  Platform-Specific Troubleshooting
 
-### 🍎 **macOS Issues**
+###  **macOS Issues**
 
 **"Operation not permitted" errors**
 - Grant Terminal accessibility permissions
@@ -505,7 +505,7 @@ const volumeCommand = {
 - Check microphone permissions in browser
 - System Preferences > Security & Privacy > Microphone
 
-### 🪟 **Windows Issues**
+###  **Windows Issues**
 
 **Volume control not working**
 - Install NirCmd utility for advanced audio control
@@ -516,7 +516,7 @@ const volumeCommand = {
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 
-### 🐧 **Linux Issues**
+###  **Linux Issues**
 
 **Audio/TTS not working**
 ```bash
