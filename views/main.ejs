@@ -360,6 +360,19 @@
               </div>
             </div>
           </div>
+
+          <!-- Chrome-only notice -->
+          <div
+            id="chromeOnlyNotice"
+            class="fixed z-50 top-4 left-4 right-4 md:right-auto md:w-[420px]
+                   rounded-xl border border-yellow-400/40 bg-yellow-400/10
+                   px-4 py-3 backdrop-blur-md"
+          >
+            <p class="text-yellow-200 text-xs leading-relaxed">
+              Voice commands work best in <span class="font-semibold">Google Chrome</span>.
+              If microphone/voice recognition doesn’t start, please open this page in Chrome and allow microphone access.
+            </p>
+          </div>
         </div>
 
         <!-- Right Panel - Command History -->
@@ -585,6 +598,25 @@
           }
         });
       });
+
+      // Only hide on *real* Google Chrome (not Edge/Opera/Brave)
+      (function chromeOnlyBanner() {
+        const el = document.getElementById("chromeOnlyNotice");
+        if (!el) return;
+
+        const ua = navigator.userAgent || "";
+        const vendor = navigator.vendor || "";
+
+        const isChromium = /Chrome\//.test(ua);
+        const isEdge = /Edg\//.test(ua);
+        const isOpera = /OPR\//.test(ua);
+        const isBrave = typeof navigator.brave !== "undefined" || /Brave\//.test(ua);
+
+        // Google Chrome usually reports vendor "Google Inc."
+        const isGoogleChrome = isChromium && vendor === "Google Inc." && !isEdge && !isOpera && !isBrave;
+
+        if (isGoogleChrome) el.style.display = "none";
+      })();
 
       // Initialize status
       updateStatus('status-inactive', 'Ready');
